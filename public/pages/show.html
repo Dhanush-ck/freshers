@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show List</title>
+    <link rel="stylesheet" href="../css/show.css">
+    <script type="module" src="../js/show.js"></script>
+</head>
+<body>
+    <canvas id="matrix"></canvas>
+    <div class="container">
+        <div class="container-element">
+            <div class="count">Loading...</div>
+            <h1>List Users</h1>
+            <div class="year-group">
+                <div class="option selected" data-value="1">1</div>
+                <div class="option" data-value="2">2</div>
+                <div class="option" data-value="3">3</div>
+                <select id="year">
+                    <option value="1" selected>1st Year</option>
+                    <option value="2">2nd Year</option>
+                    <option value="3">3rd Year</option>
+                </select>
+            </div>
+            <button class="show" id="submit-button">Show</button>
+            <div class="list-content"></div>
+        </div>
+    </div>
+
+    <script src="../js/matrix.js"></script>
+</body>
+</html>
