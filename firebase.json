@@ -1,6 +1,11 @@
 {
   "hosting": {
     "public": "public",
+    "rewrites": [
+      {"source": "/manage", "destination": "/pages/manage.html"},
+      {"source": "/random", "destination": "/pages/random.html"},
+      {"source": "/show", "destination": "/pages/show.html"}
+    ],
     "ignore": [
       "firebase.json",
       "**/.*",
