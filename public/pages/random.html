@@ -4,18 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Select</title>
+    <link rel="stylesheet" href="../css/random.css">
     <script type="module" src="../js/random.js"></script>
 </head>
 <body>
-    <label for="year">Year: </label>
-    <select name="" id="year">
-        <option value="1">1st Year</option>
-        <option value="2">2nd Year</option>
-        <option value="3">3rd Year</option>
-    </select>
-    <br>
-    <button type="submit" id="submit-button">Submit</button>
-
-    <div class="result"></div>
+    <canvas id="matrix"></canvas>
+    <input type="text" id="active-user" value="null">
+    <input type="text" id="active-pass" value="null">
+    <div class="info">!</div>
+    <div class="popup">
+        <div class="close-holder">
+            <div class="close">Close</div>
+        </div>
+        <div class="input-section">
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button class="submit">Submit</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="container-element">
+            <h1>Random Selector</h1>
+            <div class="year-group">
+                <div class="option selected" data-value="1">1</div>
+                <div class="option" data-value="2">2</div>
+                <div class="option" data-value="3">3</div>
+                <select id="year">
+                    <option value="1" selected>1st Year</option>
+                    <option value="2">2nd Year</option>
+                    <option value="3">3rd Year</option>
+                </select>
+            </div>
+            <button type="submit" id="submit-button">Pick Random</button>
+            
+            <div class="result"></div>
+        </div>
+    </div>
+    <script src="../js/matrix.js"></script>
 </body>
 </html>
