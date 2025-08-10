@@ -32,18 +32,21 @@ async function getCount() {
     if(users.length > 0) {
         // const data = Object.values(snapshot.val());
         // console.log(data)
-        const temp1 = users.filter(user => user.year == 1);
-        const temp2 = users.filter(user => user.year == 2);
-        const temp3 = users.filter(user => user.year == 3);
-        year1Total = temp1.length;
-        year2Total = temp2.length;
-        year3Total = temp3.length;
+        year1Total = users.filter(user => user.year == 1).length;
+        year2Total = users.filter(user => user.year == 2).length;
+        year3Total = users.filter(user => user.year == 3).length;
+    }
+    else{
+        year1Total = year2Total = year3Total = 0;
     }
     
     if(alreadySelected.length > 0) {
         year1 = users.filter(user=> user.year == 1 && alreadySelected.includes(user.id)).length;
         year2 = users.filter(user=> user.year == 2 && alreadySelected.includes(user.id)).length;
         year3 = users.filter(user=> user.year == 3 && alreadySelected.includes(user.id)).length;
+    }
+    else {
+        year1 = year2 = year3 = 0;
     }
     
     const count = document.querySelector('.count');
