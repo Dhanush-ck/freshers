@@ -4,12 +4,12 @@ import { getDatabase, ref, get, remove } from "https://www.gstatic.com/firebasej
 const firebaseConfig = {
     apiKey: "AIzaSyBUzclLb-x3w7gwhUI0yFjnSR9XK0qeZf4",
     authDomain: "freshers-b7154.firebaseapp.com",
-    databaseURL: "https://freshers-b7154-default-rtdb.asia-southeast1.firebasedatabase.app",
+    databaseURL: "https://freshers-b7154-default-rtdb.asia-southeast1.firebasedatabase.app/",
     projectId: "freshers-b7154",
     storageBucket: "freshers-b7154.firebasestorage.app",
     messagingSenderId: "766559730907",
-    appId: "1:766559730907:web:483353c400287fb297a0fe",
-    measurementId: "G-2JFT2N8ZNK"
+    appId: "1:766559730907:web:ea18f3f36cb85a3897a0fe",
+    measurementId: "G-CY54P2HVGX"
 };
 
 const app = initializeApp(firebaseConfig);
@@ -36,7 +36,7 @@ async function loadUsers() {
     
     if(filteredData.length > 0) {
         filteredData.forEach(data => {
-            content.innerHTML += `${data.name} - Year ${data.year} <button class="remove-button" value=${data.id}>Remove</button> <br>`
+            content.innerHTML += ` <span class='name'> ${data.name} </span> <span class='year'> Year ${data.year} </span> <div class='button-holder' > <button class="remove-button" value=${data.id}>Remove</button> </div>`
             
         })
     }
