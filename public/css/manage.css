@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+* {
+    margin: 0;
+    border: none;
+    padding: 0;
+    font-family: "Shadows Into Light", cursive;
+
+}
+
+body {
+    margin: 0;
+    background: black;
+    overflow-x: hidden;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    z-index: 0;
+}
+
+.container {
+    z-index: 1;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-element {
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(120, 120, 120, 0.15); 
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px); 
+    color: white;
+    min-width: 450px;
+    border-radius: 10px;
+    animation: pulse 2s infinite;
+    font-size: 25px;
+    margin: 30px;
+}
+
+h1 {
+    margin: 20px 20px 0 20px;
+}
+
+.content {
+    margin: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 15px;
+    width: 90%;
+}
+
+.load {
+    text-align: center;
+}
+
+.remove-button {
+    background-color: rgba(120, 120, 120, 0.15);
+    color: white;
+    padding: 5px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid red;
+    transition: 0.2s;
+    cursor: pointer;
+    height: max-content;
+
+    &:hover {
+        background-color: red;
+    }
+}
+
+.button-holder { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.year, .name {
+    display: flex;
+    align-items: center;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(0, 191, 255, 0.3),
+                    0 0 25px rgba(0, 191, 255, 0.2),
+                    0 0 40px rgba(0, 191, 255, 0.1);
+    }
+    50% {
+        box-shadow: 0 0 15px rgba(0, 191, 255, 0.35),
+                    0 0 30px rgba(0, 191, 255, 0.25),
+                    0 0 45px rgba(0, 191, 255, 0.15);
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .container-element {
+        width: 300px;
+        font-size: 20px;
+        min-width: 300px;
+    }
+
+    .content {
+        gap: 10px;
+    }
+
+}
+
+@media only screen and (min-width: 381px) and (max-width: 400px) {
+    .container-element {
+        width: 320px;
+        font-size: 20px;
+        min-width: 300px;
+    }
+
+    .content {
+        gap: 10px;
+    }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 600px) {
+    .container-element {
+        width: 340px;
+        font-size: 25px;
+        min-width: 340px;
+    }
+
+    .content {
+        margin: 20px;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    .container-element {
+        width: 480px;
+        font-size: 35px;
+        min-width: 480px;
+    }
+
+    .content {
+        margin: 25px;
+        gap: 20px;
+    }
+
+    .remove-button {
+        font-size: 25px;
+        padding: 10px;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+    .container-element {
+        width: 550px;
+        font-size: 40px;
+        min-width: 550px;
+    }
+
+    .content {
+        margin: 30px;
+        gap: 20px;
+    }
+
+    .remove-button {
+        font-size: 28px;
+        padding: 10px;
+    }
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1200px) and (max-height: 699px) {
+    
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1200px) and (min-height: 700px) {
+    .container-element {
+        width: 630px;
+        font-size: 45px;
+        min-width: 630px;
+    }
+
+    .content {
+        margin: 35px ;
+        gap: 25px;
+    }
+
+    .remove-button {
+        font-size: 33px;
+        padding: 15px;
+    }
+}
